@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2lrw1hd8f4ef"]
+
+[ext_resource type="PackedScene" uid="uid://oapk12r4xx7q" path="res://Kart.tscn" id="1_yhc6h"]
+[ext_resource type="Environment" uid="uid://8uf6lqqkc52g" path="res://Enviorment.tres" id="3_51n4d"]
+[ext_resource type="Material" uid="uid://q1hyolwdr14v" path="res://TestSceneTexture.tres" id="4_56jk8"]
+
+[sub_resource type="Curve3D" id="Curve3D_nfjtp"]
+bake_interval = 10.0
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -100, 1, -130, 0, 0, 0, 0, 0, 50, -100, 1, 130, -50, 0, 0, 50, 0, 0, 0, 0, 230, 0, 0, 50, 0, 0, 0, 100, 1, 130, 0, 0, 0, 0, 0, -50, 100, 1, -130, 50, 0, 0, -50, 0, 0, 0, 1, -230, 0, 0, -50, 0, 0, 0, -100, 1, -130),
+"tilts": PackedFloat32Array(0, 0, 1, 0, 0, 0, 0)
+}
+point_count = 7
+
+[node name="TheLoop" type="Node3D"]
+
+[node name="Kart" parent="." instance=ExtResource("1_yhc6h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 5, 0)
+
+[node name="Ground" type="CSGCombiner3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, 0, 0, 0)
+use_collision = true
+
+[node name="DirectionalLight3d" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("3_51n4d")
+
+[node name="Borders" type="StaticBody3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="MainTrack" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="Path3D" type="Path3D" parent="MainTrack"]
+curve = SubResource("Curve3D_nfjtp")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="MainTrack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+use_collision = true
+polygon = PackedVector2Array(-10, 0, -10, 1, -9, 1, -9, 0)
+mode = 2
+path_node = NodePath("../Path3D")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 0.0
+path_joined = true
+
+[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="MainTrack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+use_collision = true
+polygon = PackedVector2Array(9, 0, 9, 1, 10, 1, 10, 0)
+mode = 2
+path_node = NodePath("../Path3D")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 0.0
+path_joined = true
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="MainTrack"]
+use_collision = true
+polygon = PackedVector2Array(-10, 0, -10, 1, 10, 1, 10, 0)
+mode = 2
+path_node = NodePath("../Path3D")
+path_interval_type = 0
+path_interval = 1.0
+path_simplify_angle = 0.0
+path_rotation = 2
+path_local = false
+path_continuous_u = true
+path_u_distance = 0.0
+path_joined = true
+material = ExtResource("4_56jk8")

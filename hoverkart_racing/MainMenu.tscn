@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://bsp4370yyslhq"]
+
+[ext_resource type="FontFile" uid="uid://nfaiow4tlb0t" path="res://addons/Nuinto.ttf" id="1_db2ro"]
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_t07se"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x61hl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ch151"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ed3gy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dflx2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q11p8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t07se")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.784314, 0.784314, 0.784314, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -507.5
+offset_top = -179.0
+offset_right = 507.5
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_fonts/normal_font = ExtResource("1_db2ro")
+theme_override_font_sizes/normal_font_size = 100
+text = "HOVER KART RACING"
+scroll_active = false
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -246.0
+offset_top = -44.0
+offset_right = 334.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
+theme_override_colors/font_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/font_pressed_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/font_hover_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/font_focus_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/font_disabled_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/font_outline_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/icon_normal_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/icon_pressed_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/icon_hover_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/icon_focus_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_colors/icon_disabled_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_fonts/font = ExtResource("1_db2ro")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x61hl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ch151")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ed3gy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_dflx2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q11p8")
+text = "QUICK RACE"
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

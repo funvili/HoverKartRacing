@@ -1,0 +1,310 @@
+[gd_scene load_steps=9 format=3 uid="uid://d1r7ddxdwrr6x"]
+
+[ext_resource type="Script" path="res://LevelSelector.gd" id="1_r525i"]
+[ext_resource type="FontFile" uid="uid://nfaiow4tlb0t" path="res://addons/Nuinto.ttf" id="3_u3nyn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1t4k"]
+bg_color = Color(0, 0, 0, 0.282353)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mgtwi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vup5l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r7j3g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iigtc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g6nsm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r525i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.784314, 0.784314, 0.784314, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_bottom = 1.0
+offset_right = 314.0
+grow_vertical = 2
+color = Color(0, 0, 0, 0.694118)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 20.0
+offset_right = 301.0
+offset_bottom = 370.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k1t4k")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TheLoop" type="Panel" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(280, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LoopButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/TheLoop"]
+layout_mode = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_right = 280.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_u3nyn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mgtwi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vup5l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r7j3g")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_iigtc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g6nsm")
+text = "The Loop"
+
+[node name="TightTurns" type="Panel" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(280, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TurnsButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/TightTurns"]
+layout_mode = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_right = 280.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_u3nyn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mgtwi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vup5l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r7j3g")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_iigtc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g6nsm")
+text = "Tight Turns"
+
+[node name="CrissCross" type="Panel" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(280, 60)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CrossButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/CrissCross"]
+layout_mode = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+offset_right = 280.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_u3nyn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mgtwi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vup5l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r7j3g")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_iigtc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g6nsm")
+text = "Criss-Cross"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -363.0
+offset_top = -83.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/default_color = Color(0.196078, 0.196078, 0.196078, 1)
+theme_override_fonts/normal_font = ExtResource("3_u3nyn")
+theme_override_font_sizes/normal_font_size = 60
+text = "Map Selector"
+scroll_active = false
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -83.0
+offset_right = 148.0
+offset_bottom = 55.0
+grow_vertical = 0
+scale = Vector2(0.6, 0.6)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_u3nyn")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mgtwi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vup5l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r7j3g")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_iigtc")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g6nsm")
+text = "<"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 17.0
+offset_top = 371.0
+offset_right = 297.0
+offset_bottom = 545.0
+
+[node name="Map" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -280.0
+offset_top = -174.0
+offset_bottom = -105.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_u3nyn")
+theme_override_font_sizes/normal_font_size = 50
+text = "The Loop"
+scroll_active = false
+
+[node name="Difficulty" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -271.0
+offset_top = -107.0
+offset_right = 9.0
+offset_bottom = -65.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_u3nyn")
+theme_override_font_sizes/normal_font_size = 30
+text = "Medium"
+scroll_active = false
+
+[node name="Description" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+anchor_left = 0.032
+anchor_top = 0.368
+anchor_right = 0.032
+anchor_bottom = 0.368
+offset_left = 0.04
+offset_top = 44.968
+offset_right = 280.04
+offset_bottom = 131.968
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_u3nyn")
+theme_override_font_sizes/normal_font_size = 20
+text = "Why not just race around in circles and see who can reach the end the fastest?"
+scroll_active = false
+
+[node name="Play" type="Button" parent="Control"]
+layout_mode = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 54.0
+offset_top = 29.0
+offset_right = 357.0
+offset_bottom = 120.0
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_u3nyn")
+theme_override_font_sizes/font_size = 60
+text = "RACE  >"
+
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/TheLoop/LoopButton" to="." method="_on_loop_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/TightTurns/TurnsButton" to="." method="_on_turns_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/CrissCross/CrossButton" to="." method="_on_cross_button_pressed"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Control/Play" to="." method="_on_play_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Play" to="." method="_on_play_mouse_exited"]
+[connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]
